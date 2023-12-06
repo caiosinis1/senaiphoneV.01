@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="header_senaiphone.css">
+    <link rel="stylesheet" href="estiloCarrossel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-rmCt1FIY9nDpHTNFRnxJLsfzRXdNfRz8o0hB5RG8HRKcR2QeV/8EyJXchpxLqOrR" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/52d2d26a81.js" crossorigin="anonymous"></script>
+    <script src="carrossel.js" defer></script>
+    <script src="carrosselOferta.js"></script>
+    <title>SENAiPhone</title>
+</head>
+<body>
+
+  <!--DIV da Logo da empresa-->
+  <div class="header">
+    <div class="image-header">
+      <img src="logoSenaiphone.png" alt="logo da empresa">
+    </div>
+
+    <!--DIV da SEARCH BOX-->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Pesquisar...">
+      <button id="searchButton"><i class="fas fa-search"></i></button>
+    </div>
+
+    <!--menu de opções-->
+    <a id="home" href="">Home</a>
+    <a id="filtrar" href="">Filtrar</a>
+    <a id="categorias" href="">Categorias</a>
+    <a id="historico" href="">Histórico</a>
+    <a id="meusPedidos" href="">Meus pedidos</a>
+ 
+    
+    
+  </div>
+        <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+        <label for="openSidebarMenu" class="sidebarIconToggle">
+            <div class="spinner diagonal part-1"></div>
+            <div class="spinner horizontal"></div>
+            <div class="spinner diagonal part-2"></div>
+        </label>
+
+        <!--DIV menu Hamburguer-->
+        <div id="sidebarMenu">
+          <ul class="sidebarMenuInner">
+            <li id="opcaoHome"><a href="" target="_blank"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="#" target="_blank"><i class="fas fa-link"></i> item 2</a></li>
+            <li><a href="#" onclick="openCartModal()"><i class="fa-solid fa-cart-shopping"></i> Carrinho</a></li>
+            <li><a href="#" target="_blank"><i class="fas fa-user"></i> Minha Conta</a></li>
+            <li><a href="#" target="_blank"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+          </ul>
+        </div>
+        
+
+
+   
+
+  <!--SESSAO DOS PRODUTOS-->
+  <div class="container-produtos">
+    <section class="vistosRecentemente">
+      <h2>Vistos Recentemente</h2>
+      <div class="cards-section">
+
+        <!--PRODUTOS VISTOS RECENTEMENTES-->
+        <div class="card" id="card1-vistosRecentemente">
+          <div class="image-card">
+            <img src="iphone14.png" alt="iphone 14 pro">
+          </div>
+          <div class="text-card">
+            <span class="nomeProduto">iPhone 14 Pro - Azul</span>
+            <span class="precoProduto">R$2799,90</span>
+          </div>
+        </div>
+
+        <div class="card" id="card2-vistosRecentemente">
+          <div class="image-card">
+            <img src="iphone12Verde.png" alt="iphone 12 verde">
+          </div>
+          <div class="text-card">
+            <span class="nomeProduto">iPhone 12 - Verde</span>
+            <span class="precoProduto">R$2399,90</span>
+          </div>
+        </div>
+
+        <div class="card" id="card3-vistosRecentemente">
+          <div class="image-card">
+            <img src="M2-PrateadoAir.webp" alt="macbook">
+          </div>
+          <div class="text-card">
+            <span class="nomeProduto">Macbook Air M2 - Cinza</span>
+            <span class="precoProduto">R$5799,90</span>
+          </div>
+        </div>
+
+        <div class="card" id="card4-vistosRecentemente">
+          <div class="image-card">
+            <img src="iphone12purpura.png" alt="iphone 12">
+          </div>
+          <div class="text-card">
+            <span class="nomeProduto">iPhone 12 - Púrpura</span>
+            <span class="precoProduto">R$2889,90</span>
+          </div>
+        </div>
+
+        <div class="card" id="card5-vistosRecentemente">
+          <div class="image-card">
+            <img src="iphone14.png" alt="iphone 14 pro">
+          </div>
+          <div class="text-card">
+            <span class="nomeProduto">iPhone 14 Pro - Azul</span>
+            <span class="precoProduto">R$2799,90</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+   <!-- CARROSSEL DE ITENS -->
+<div class="carousel-section">
+  <h2>Para Você</h2>
+
+  <div class="carousel-container">
+      <div class="carousel-track">
+          <!-- CONTEÚDO DOS CARDS-->
+          <div class="carousel-item">
+              <div class="card" id="carousel-card1">
+                  <div class="image-card">
+                      <img id="iphone14Azul" src="iphone14.png" alt="iphone 14 pro">
+                  </div>
+                  <div class="text-card">
+                      <span class="nomeProduto">iPhone 14 Pro - Azul</span>
+                      <span class="precoProduto">R$2799,90</span>
+                  </div>
+              </div>
+          </div>
+
+          <div class="carousel-item">
+              <div class="card" id="carousel-card2">
+                  <div class="image-card">
+                      <img id="iphoneVerde" src="iphone12Verde.png" alt="iphone 12 verde">
+                  </div>
+                  <div class="text-card">
+                      <span class="nomeProduto">iPhone 12 - Verde</span>
+                      <span class="precoProduto">R$2399,90</span>
+                  </div>
+              </div>
+          </div>
+
+          <div class="carousel-item">
+              <div class="card" id="carousel-card3">
+                  <div class="image-card">
+                      <img id="macBook" src="M2-PrateadoAir.webp" alt="macbook">
+                  </div>
+                  <div class="text-card">
+                      <span class="nomeProduto">Macbook Air M2 - Cinza</span>
+                      <span class="precoProduto">R$5799,90</span>
+                  </div>
+              </div>
+          </div>
+
+          <div class="carousel-item">
+              <div class="card" id="carousel-card4">
+                  <div class="image-card">
+                      <img id="appleWatch" src="AW_series9_preto.png" alt="Apple Watch">
+                  </div>
+                  <div class="text-card">
+                      <span class="nomeProduto">iPhone 12 - Púrpura</span>
+                      <span class="precoProduto">R$2889,90</span>
+                  </div>
+              </div>
+          </div>
+
+          <div class="carousel-item">
+              <div class="card" id="carousel-card5">
+                  <div class="image-card">
+                      <img id="iphone14Azul" src="iphone14.png" alt="iphone 14 pro">
+                  </div>
+                  <div class="text-card">
+                      <span class="nomeProduto">iPhone 14 Pro - Azul</span>
+                      <span class="precoProduto">R$2799,90</span>
+                  </div>
+              </div>
+          </div>
+
+
+          <div class="carousel-item">
+            <div class="card" id="carousel-card4">
+                <div class="image-card">
+                    <img id="iphonePurpura" src="iphone12Purpura.png" alt="iphone 12">
+                </div>
+                <div class="text-card">
+                    <span class="nomeProduto">iPhone 12 - Púrpura</span>
+                    <span class="precoProduto">R$2889,90</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="carousel-item">
+          <div class="card" id="carousel-card4">
+              <div class="image-card">
+                  <img id="iphonePurpura" src="iphone12purpura.png" alt="iphone 12">
+              </div>
+              <div class="text-card">
+                  <span class="nomeProduto">iPhone 12 - Púrpura</span>
+                  <span class="precoProduto">R$2889,90</span>
+              </div>
+          </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <div class="card" id="carousel-card4">
+            <div class="image-card">
+                <img src="iphone12Verde.png" alt="iphone 12">
+            </div>
+            <div class="text-card">
+                <span class="nomeProduto">iPhone 12 - Púrpura</span>
+                <span class="precoProduto">R$2889,90</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="card" id="carousel-card4">
+          <div class="image-card">
+              <img src="airPods_max_cinza.png" alt="airPods">
+          </div>
+          <div class="text-card">
+              <span class="nomeProduto">iPhone 12 - Púrpura</span>
+              <span class="precoProduto">R$2889,90</span>
+          </div>
+      </div>
+  </div>
+
+  <div class="carousel-item">
+    <div class="card" id="carousel-card4">
+        <div class="image-card">
+            <img src="airPods_max_cinza.png" alt="airPods">
+        </div>
+        <div class="text-card">
+            <span class="nomeProduto">iPhone 12 - Púrpura</span>
+            <span class="precoProduto">R$2889,90</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="carousel-item">
+  <div class="card" id="carousel-card4">
+      <div class="image-card">
+          <img src="airPods_max_cinza.png" alt="airPods">
+      </div>
+      <div class="text-card">
+          <span class="nomeProduto">iPhone 12 - Púrpura</span>
+          <span class="precoProduto">R$2889,90</span>
+      </div>
+  </div>
+</div>
+
+      </div>
+
+      <button class="carousel-prev">&lt;</button>
+      <button class="carousel-next">&gt;</button>
+  </div>
+
+</div>
+
+
+<!-- SESSAO PARA EXIBIR ITENS EM OFERTA -->
+<section class="ofertas-section">
+  <h2>Itens em Oferta até R$2199,90</h2>
+
+  <div class="slider-container">
+    <div class="slider">
+
+      <div class="item">
+        <div class="card" id="carousel-card4">
+          <div class="image-card-oferta">
+              <img id="airPods" src="airPods_max_cinza.png" alt="airPods">
+          </div>
+          <div class="text-card">
+              <span class="nomeProduto">iPhone 12 - Púrpura</span>
+              <span class="precoProduto"><s class="precoOferta">R$3479,90</s>R$2082,90</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="item">
+        <div class="card" id="carousel-card4">
+          <div class="image-card-oferta">
+              <img id="macBook" src="M2-PrateadoAir.webp" alt="airPods">
+          </div>
+          <div class="text-card">
+              <span class="nomeProduto">iPhone 12 - Púrpura</span>
+              <span class="precoProduto"><s class="precoOferta">R$3479,90</s>R$2089,90</span>
+          </div>
+      </div>
+      </div>
+
+
+      <div class="item">
+        <div class="card" id="carousel-card4">
+          <div class="image-card-oferta">
+              <img id="iphoneVerde" src="iphone12Verde.png" alt="airPods">
+          </div>
+          <div class="text-card">
+              <span class="nomeProduto">iPhone 12 - Púrpura</span>
+              <span class="precoProduto"><s class="precoOferta">R$3479,90</s>R$2089,90</span>
+          </div>
+      </div>
+      </div>
+
+
+      <div class="item">
+        <div class="card" id="carousel-card4">
+          <div class="image-card-oferta">
+              <img id="airPods" src="airPods_max_cinza.png" alt="airPods">
+          </div>
+          <div class="text-card">
+              <span class="nomeProduto">iPhone 12 - Púrpura</span>
+              <span class="precoProduto"><s class="precoOferta">R$3479,90</s>R$2110,90</span>
+          </div>
+      </div>
+      </div>
+
+
+      <div class="item">
+        <div class="card" id="carousel-card4">
+          <div class="image-card-oferta">
+              <img  id="iphone14Azul" src="iphone14.png" alt="airPods">
+          </div>
+          <div class="text-card">
+              <span class="nomeProduto">iPhone 12 - Púrpura</span>
+              <span class="precoProduto"><s class="precoOferta">R$3479,90</s>R$2089,90</span>
+          </div>
+      </div>
+      </div>
+
+
+      <div class="item">
+        <div class="card" id="carousel-card4">
+          <div class="image-card-oferta">
+              <img id="macBook" src="M2-PrateadoAir.webp" alt="airPods">
+          </div>
+          <div class="text-card">
+              <span class="nomeProduto">iPhone 12 - Púrpura</span>
+              <span class="precoProduto"><s class="precoOferta">R$3479,90</s>R$2069,90</span>
+          </div>
+      </div>
+      </div>
+
+
+      <div class="item">
+        <div class="card" id="carousel-card4">
+          <div class="image-card-oferta">
+              <img id="airPods" src="airPods_max_cinza.png" alt="airPods">
+          </div>
+          <div class="text-card">
+              <span class="nomeProduto">iPhone 12 - Púrpura</span>
+              <span class="precoProduto"><s class="precoOferta">R$3479,90</s>R$2059,90</span>
+          </div>
+      </div>
+      </div>
+
+
+      <div class="item">
+        <div class="card" id="carousel-card4">
+          <div class="image-card-oferta">
+              <img id="airPods" src="airPods_max_cinza.png" alt="airPods">
+          </div>
+          <div class="text-card">
+              <span class="nomeProduto">iPhone 12 - Púrpura</span>
+              <span class="precoProduto"><s class="precoOferta">R$3479,90</s>R$2039,90</span>
+          </div>
+      </div>
+      </div>
+
+
+      <div class="item">
+        <div class="card" id="carousel-card4">
+          <div class="image-card-oferta">
+              <img id="macBook" src="M2-PrateadoAir.webp" alt="airPods">
+          </div>
+          <div class="text-card">
+              <span class="nomeProduto">iPhone 12 - Púrpura</span>
+              <span class="precoProduto"><s class="precoOferta">R$3479,90</s>R$2029,90</span>
+          </div>
+      </div>
+      </div>
+
+
+      <div class="item">
+        <div class="card" id="carousel-card4">
+          <div class="image-card-oferta">
+              <img id="iphoneVerde" src="iphone12Verde.png" alt="airPods">
+          </div>
+          <div class="text-card">
+              <span class="nomeProduto">iPhone 12 - Púrpura</span>
+              <span class="precoProduto"><s class="precoOferta">R$3479,90</s>R$2039,90</span>
+          </div>
+      </div>
+      </div>
+
+
+      <div class="item">
+        <div class="card" id="carousel-card4">
+          <div class="image-card-oferta">
+              <img id="airPods" src="airPods_max_cinza.png" alt="airPods">
+          </div>
+          <div class="text-card">
+              <span class="nomeProduto">iPhone 12 - Púrpura</span>
+              <span class="precoProduto"><s class="precoOferta">R$3479,90</s>R$2089,90</span>
+          </div>
+      </div>
+      </div>
+
+
+      <div class="item">
+        <div class="card" id="carousel-card4">
+          <div class="image-card-oferta">
+              <img id="macBook" src="M2-PrateadoAir.webp" alt="airPods">
+          </div>
+          <div class="text-card">
+              <span class="nomeProduto">iPhone 12 - Púrpura</span>
+              <span class="precoProduto"><s class="precoOferta">R$3479,90</s>R$2089,90</span>
+          </div>
+      </div>
+      </div>
+
+
+      <div class="item">
+        <div class="card" id="carousel-card4">
+          <div class="image-card-oferta">
+              <img id="airPods" src="airPods_max_cinza.png" alt="airPods">
+          </div>
+          <div class="text-card">
+              <span class="nomeProduto">iPhone 12 - Púrpura</span>
+              <span class="precoProduto"><s class="precoOferta">R$3479,90</s>R$2059,90</span>
+          </div>
+      </div>
+      </div>
+
+
+      <div class="item">
+        <div class="card" id="carousel-card4">
+          <div class="image-card-oferta">
+              <img id="appleWatch" src="AW_series9_preto.png" alt="airPods">
+          </div>
+          <div class="text-card">
+              <span class="nomeProduto">iPhone 12 - Púrpura</span>
+              <span class="precoProduto"><s class="precoOferta">R$3479,90</s>R$2079,90</span>
+          </div>
+      </div>
+      </div>
+
+
+      <div class="item">
+        <div class="card" id="carousel-card4">
+          <div class="image-card-oferta">
+              <img id="macBook" src="M2-PrateadoAir.webp" alt="airPods">
+          </div>
+          <div class="text-card">
+              <span class="nomeProduto">iPhone 12 - Púrpura</span>
+              <span class="precoProduto"><s class="precoOferta">R$3479,90</s>R$2029,90</span>
+          </div>
+      </div>
+      </div>
+
+
+    </div>
+    <button class="prev-button" onclick="prevSlide()">Anterior</button>
+    <button class="next-button" onclick="nextSlide()">Próximo</button>
+  </div>
+
+  </section>
+     <!-- MODAL DO CARRINHO -->
+     <div id="cartModal" class="modal">
+      <div class="modal-content">
+          <span class="close" onclick="closeCartModal()">&times;</span>
+          <h2>Carrinho de Compras</h2>
+
+          <!-- CONTEÚDO DO CARRINHO -->
+          <div class="cart-item">
+              <img src="iphone12Verde.png" alt="Produto 1">
+              <div class="item-details">
+                  <span class="item-name">iPhone 12 - Verde</span>
+                  <span class="item-quantity">
+                      <button class=" decrementarProdutoCarrinho" onclick="decreaseQuantity()">-</button>
+                      <button class="incrementarProdutoCarrinho" onclick="increaseQuantity()">+</button>
+                      <span>1</span>
+                      
+                  </span>
+                  <span class="item-total">R$2899,90</span>
+                  <button class="delete-button" onclick="removeItem()">Excluir</button>
+              </div>
+          </div>
+
+          
+          <div class="cart-item">
+            <img src="M2-PrateadoAir.webp" alt="Produto 2">
+            <div class="item-details">
+                <span class="item-name">MacBook M2 - Prata</span>
+                <span class="item-quantity">
+                    <button class=" decrementarProdutoCarrinho" onclick="decreaseQuantity()">-</button>
+                    <button class="incrementarProdutoCarrinho" onclick="increaseQuantity()">+</button>
+                    <span>1</span>
+                </span>
+                <span class="item-total">R$2899,90</span>
+                <button class="delete-button" onclick="removeItem()">Excluir</button>
+            </div>
+          </div>
+
+        
+          <div class="cart-item">
+            <img src="iphone12Verde.png" alt="Produto 3">
+            <div class="item-details">
+                <span class="item-name">iPhone 12 - Verde</span>
+                <span class="item-quantity">
+                    <button class=" decrementarProdutoCarrinho" onclick="decreaseQuantity()">-</button>
+                    <button class="incrementarProdutoCarrinho" onclick="increaseQuantity()">+</button>
+                    <span>1</span>
+                    
+                </span>
+                <span class="item-total">R$2899,90</span>
+                <button class="delete-button" onclick="removeItem()">Excluir</button>
+            </div>
+          </div>
+        
+        <div class="cart-item">
+            <img src="iphone12Verde.png" alt="Produto 4">
+            <div class="item-details">
+                <span class="item-name">iPhone 12 - Verde</span>
+                <span class="item-quantity">
+                    <button class="decrementarProdutoCarrinho" onclick="decreaseQuantity()">-</button>
+                    <button class="incrementarProdutoCarrinho" onclick="increaseQuantity()">+</button>
+                    <span>1</span>
+                </span>
+                <span class="item-total">R$3979,99</span>
+                <button class="delete-button" onclick="removeItem()">Excluir</button>
+            </div>
+        </div>
+        
+        <div class="cart-item">
+            <img src="iphone14.png" alt="Produto 5">
+            <div class="item-details">
+                <span class="item-name">iPhone 14 - Azul</span>
+                <span class="item-quantity">
+                    <button class="decrementarProdutoCarrinho" onclick="decreaseQuantity()">-</button>
+                    <button class="incrementarProdutoCarrinho" onclick="increaseQuantity()">+</button>
+                    <span>1</span>
+                </span>
+                <span class="item-total">R$4299,99</span>
+                <button class="delete-button" onclick="removeItem()">Excluir</button>
+            </div>
+        </div>
+
+
+          <!-- TOTAL DO CARRINHO -->
+          <div class="cart-total">
+              <span>Total: </span>
+              <span id="totalAmount">R$2899,90</span>
+          </div>
+
+          <!--BOTOES-->
+          <div class="botaoFinalizar">
+            <a href="#"><i style="margin-right: 4px;" class="fa-solid fa-circle-check"></i>Finalizar Compra</a>
+          </div>
+
+      </div>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay" onclick="closeCartModal()"></div>
+
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+.slider-container {
+    position: relative;
+    width: 98%;
+    margin: 50px auto;
+    overflow: hidden;
+    overflow-x: scroll;
+    padding-bottom: 2%;
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .item {
+    box-sizing: border-box;
+    
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #e4e4e466;
+    margin-right: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .prev-button,
+  .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #3498db; 
+    color: #fff; 
+    border: none;
+    border-radius: 4px;
+    display: none;
+  }
+  
+  .prev-button {
+    left: 10px;
+  }
+  
+  .next-button {
+    right: 10px;
+  }
+
+  .image-card-oferta{
+    height: 220px;
+    width: 245px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+  }
+
+  .precoOferta{
+    color: red;
+    margin-right: 12px;
+  }
